@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fuel_consumption_calculator/components/costScreen.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -20,7 +21,7 @@ class _BodyState extends State<Body> {
           child: Stack(
             children: <Widget>[
               Container(
-                height: size.height * 0.4 - 50,
+                height: size.height * 0.37 - 50,
                 decoration: BoxDecoration(
                     borderRadius:
                         BorderRadius.only(bottomLeft: Radius.circular(50)),
@@ -29,7 +30,10 @@ class _BodyState extends State<Body> {
               Positioned(
                   child: Container(
                 decoration: BoxDecoration(
-                    color: Colors.orange[400], shape: BoxShape.circle),
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.orange[400], width: 2),
+                ),
               )),
               Stack(
                 children: <Widget>[
@@ -64,7 +68,7 @@ class _BodyState extends State<Body> {
                                     '${sliderKm.toInt()} km',
                                     style: TextStyle(
                                         color: Colors.black,
-                                        fontSize: size.height * 0.04,
+                                        fontSize: size.height * 0.039,
                                         fontWeight: FontWeight.bold),
                                   )
                                 ],
@@ -85,7 +89,7 @@ class _BodyState extends State<Body> {
                                     '${sliderL.toInt()} l',
                                     style: TextStyle(
                                         color: Colors.black,
-                                        fontSize: size.height * 0.04,
+                                        fontSize: size.height * 0.039,
                                         fontWeight: FontWeight.bold),
                                   )
                                 ],
@@ -100,7 +104,7 @@ class _BodyState extends State<Body> {
                       child: Text(
                         '${((sliderL / sliderKm) * 100).toStringAsFixed(2)}l/100km',
                         style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black87,
                             fontSize: size.height * 0.053,
                             fontWeight: FontWeight.w300),
                       ),
@@ -144,8 +148,8 @@ class _BodyState extends State<Body> {
               });
             },
             min: 0,
-            max: 1000,
-            divisions: 100,
+            max: 990,
+            divisions: 99,
           ),
         ),
         Padding(
@@ -182,22 +186,37 @@ class _BodyState extends State<Body> {
               }),
         ),
         SizedBox(
-          height: size.height * 0.03,
+          height: size.height * 0.05,
         ),
         Center(
-          child: Container(
-            height: size.height * 0.09,
-            width: size.width * 0.49,
-            decoration: BoxDecoration(
-                color: Colors.orange[400],
-                borderRadius: BorderRadius.circular(30)),
-            child: Center(
-              child: Text(
-                'Policz koszt',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: size.height * 0.03,
-                    fontWeight: FontWeight.w300),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                      pageBuilder: (_, __, ___) => _getCostPage(context)));
+            },
+            child: Container(
+              height: size.height * 0.07,
+              width: size.width * 0.56,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(30),
+                  border: Border.all(color: Colors.orange[400], width: 2),
+                  boxShadow: [
+                    BoxShadow(
+                        offset: Offset(0, 5),
+                        blurRadius: size.height * 0.036,
+                        color: Colors.orange[400].withOpacity(0.3))
+                  ]),
+              child: Center(
+                child: Text(
+                  'Policz koszt',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: size.height * 0.026,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             ),
           ),
@@ -205,4 +224,8 @@ class _BodyState extends State<Body> {
       ],
     );
   }
+}
+
+_getCostPage(context) {
+  return Scaffold(body: CostScreen());
 }

@@ -103,44 +103,41 @@ class _HomePageState extends State<HomePage>
                               pageBuilder: (_, __, ___) =>
                                   _getExpandedPage(context)));
                     },
-                    child: Hero(
-                      tag: 'first',
-                      child: Material(
-                        borderRadius: BorderRadius.circular(50),
-                        child: Container(
-                          height: 60,
-                          width: 310,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50),
-                              gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  colors: [
-                                    Colors.orange[900],
-                                    Colors.orange[800],
-                                    Colors.orange[400],
-                                  ])),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: <Widget>[
-                              Text(
-                                "Rozpocznij obliczenia",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.w400),
-                              ),
-                              ScaleTransition(
-                                scale: Tween(begin: 1.7, end: 1.0).animate(
-                                    CurvedAnimation(
-                                        parent: _animationController,
-                                        curve: Curves.decelerate)),
-                                child: Icon(
-                                  Icons.arrow_forward,
+                    child: Material(
+                      borderRadius: BorderRadius.circular(50),
+                      child: Container(
+                        height: 60,
+                        width: 310,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            gradient: LinearGradient(
+                                begin: Alignment.topCenter,
+                                colors: [
+                                  Colors.orange[900],
+                                  Colors.orange[800],
+                                  Colors.orange[400],
+                                ])),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            Text(
+                              "Rozpocznij obliczenia",
+                              style: TextStyle(
                                   color: Colors.white,
-                                ),
-                              )
-                            ],
-                          ),
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w400),
+                            ),
+                            ScaleTransition(
+                              scale: Tween(begin: 1.7, end: 1.0).animate(
+                                  CurvedAnimation(
+                                      parent: _animationController,
+                                      curve: Curves.decelerate)),
+                              child: Icon(
+                                Icons.arrow_forward,
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
                         ),
                       ),
                     ),

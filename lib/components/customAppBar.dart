@@ -5,11 +5,6 @@ AppBar myAppBar(BuildContext context) {
     centerTitle: true,
     backgroundColor: Colors.white,
     elevation: 0,
-    leading: IconButton(
-      color: Colors.black38,
-      icon: Icon(Icons.menu),
-      onPressed: () {},
-    ),
     title: RichText(
       text: TextSpan(
           style: Theme.of(context)
