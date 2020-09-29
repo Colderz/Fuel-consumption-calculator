@@ -186,9 +186,9 @@ class _BodyState extends State<Body> {
               }),
         ),
         SizedBox(
-          height: size.height * 0.05,
+          height: size.height * 0.03,
         ),
-        Center(
+        /*Center(
           child: GestureDetector(
             onTap: () {
               Navigator.push(
@@ -220,7 +220,29 @@ class _BodyState extends State<Body> {
               ),
             ),
           ),
-        ),
+        ),*/
+        Center(
+          child: Stack(children: <Widget>[
+            Container(
+              height: size.height * 0.12,
+              width: size.width * 0.88,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  gradient: LinearGradient(begin: Alignment.topCenter, colors: [
+                    Colors.orange[900],
+                    Colors.orange[800],
+                    Colors.orange[400],
+                  ])),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Koszt paliwa',
+                style: TextStyle(color: Colors.white),
+              ),
+            )
+          ]),
+        )
       ],
     );
   }
