@@ -185,64 +185,6 @@ class _BodyState extends State<Body> {
                 });
               }),
         ),
-        SizedBox(
-          height: size.height * 0.03,
-        ),
-        /*Center(
-          child: GestureDetector(
-            onTap: () {
-              Navigator.push(
-                  context,
-                  PageRouteBuilder(
-                      pageBuilder: (_, __, ___) => _getCostPage(context)));
-            },
-            child: Container(
-              height: size.height * 0.07,
-              width: size.width * 0.56,
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
-                  border: Border.all(color: Colors.orange[400], width: 2),
-                  boxShadow: [
-                    BoxShadow(
-                        offset: Offset(0, 5),
-                        blurRadius: size.height * 0.036,
-                        color: Colors.orange[400].withOpacity(0.3))
-                  ]),
-              child: Center(
-                child: Text(
-                  'Policz koszt',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: size.height * 0.026,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-            ),
-          ),
-        ),*/
-        Center(
-          child: Stack(children: <Widget>[
-            Container(
-              height: size.height * 0.12,
-              width: size.width * 0.88,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  gradient: LinearGradient(begin: Alignment.topCenter, colors: [
-                    Colors.orange[900],
-                    Colors.orange[800],
-                    Colors.orange[400],
-                  ])),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Koszt paliwa',
-                style: TextStyle(color: Colors.white),
-              ),
-            )
-          ]),
-        )
       ],
     );
   }
