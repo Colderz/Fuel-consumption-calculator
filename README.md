@@ -1,16 +1,10 @@
-# fuel_consumption_calculator
+# Fuelator
 
-A new Flutter project.
+![N|Solid](https://i.imgur.com/py9wr36.png) 
 
-## Getting Started
+"**Fuelator**" is an application written in Dart language. Flutter technology is the technology I wanted to get acquainted with. The form of the application allowed to use the visual possibilities of Flutter. The app simply presents the interface with sliders. All this in a user-friendly way allows you to determine the fuel consumption of your vehicle, or the range of the vehicle.
 
-This project is a starting point for a Flutter application.
+# Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+![N|Solid](https://i.imgur.com/dkb2CME.jpg) ![N|Solid](https://i.imgur.com/K1ArxM3.jpg) 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
